@@ -14,15 +14,32 @@ This project explores how different tokenization strategies affect model perform
 
 .
 ├── data/ # Twitter and IMDb datasets
-├── models/ # Saved models and tokenizers
+├── Tokenization Code and files
 ├── notebooks/ # Jupyter notebooks for training & evaluation
-├── scripts/ # Training and evaluation scripts
-├── results/ # Plots and metrics
-├── requirements.txt # Required Python libraries
 └── README.md # Project documentation
 
 ```
+## 🧪 Methodology
 
+### 1. **Datasets**
+- **Twitter Sentiment140** (~1.6M tweets)
+- **IMDb Movie Reviews** (~50k reviews)
+- **Combined Dataset** (Twitter + IMDb)
+
+### 2. **Model Architecture**
+- **MiniBERT**: Lightweight pre-trained transformer model
+
+### 3. **Tokenization Strategies**
+- **Baseline**: Pre-trained tokenizer + pre-trained model
+- **Custom Tokenizers**:
+  - Trained on Twitter only
+  - Trained on IMDb only
+  - Trained on Combined data
+
+### 4. **Transfer Learning Setup**
+- Fine-tune on **Twitter**, test on **IMDb**
+- Freeze encoder to test **generalization**
+- Compare performance across tokenizers
 ---
 
 ## ⚙️ Installation
@@ -70,4 +87,13 @@ Transfer learning is effective when tokenizer generalization is sufficient.
 
 # Transfer Learning for all Approaches :
 <img width="1167" height="424" alt="Transfer learning for all Approaches" src="https://github.com/user-attachments/assets/0abee731-4fff-4e91-9d78-cf35eeb2c101" />
+
+# 📚 Future Work :
+
+Explore embedding-based and meta-learning methods for transfer.
+
+Investigate near vs. far transfer dynamics.
+
+Compare tokenizer fine-tuning with adapter layers and LoRA.
+
 
